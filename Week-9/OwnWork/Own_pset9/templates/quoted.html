@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <h1><strong>The current cost of {{ item["name"] }} is {{ usd(item["price"]) }}.</strong></h1>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "tasks/layout.html" %}
+
+{% block body %}
+    {% for task in tasks %}
+        <h1>{{ task }}</h1>
+    {% empty %}
+        <h1>No Task</h1>
+    {% endfor %}
+
+    <a href="{% url 'tasks:add' %}">Add a New Task</a>
+    <!-- 아니면 <a href="./add">Add a New Task</a>도 같음 -->
+    <!-- There is one Django's feature. 위에 url task:add한 파트 we find a path that has a name="add" from urls.py in tasks folder. -->
+{% endblock %}

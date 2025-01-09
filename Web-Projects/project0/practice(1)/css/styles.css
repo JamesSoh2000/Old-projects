@@ -1,0 +1,215 @@
+body {
+  margin: 0px;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* ############ Input ############## */
+  input {
+    font-size: 16px;
+    width: 300px;
+    padding: 10px 0;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  input[type="text"] {
+
+  }
+
+  input[type=submit] {
+    font-size: 14px;
+    width: 185px;
+    /* Remove border with 'none' and make the border circular(끝에 둥글게) with 'radius'*/
+    border: none;
+    border-radius: 15px;
+    margin: 20px;
+  }
+
+  input[type="submit"]:hover {
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);
+  }
+
+
+
+
+
+
+/* ############ Header ############### */
+  .header, .header-links, .header-advanced-logo, .header-advanced {
+    display: flex;
+    align-items: center;
+  }
+
+  .header a, .header-links a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+  }
+
+  .header-advanced-logo a {
+    padding: 10px;
+  }
+
+  .header-links{
+    margin-left: auto;
+  }
+
+  .header-advanced {
+    background-color: #f1f1f1;
+    height: 50px;
+  }
+
+  .header-advanced-logo {
+    padding: 10px;
+  }
+
+  .header-advanced img {
+    height:40%;
+    width: 40%;
+  }
+
+
+/* ############## Search ##################### */
+  .search-container {
+    display: flex;
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .search-container .search-field {
+    display: flex;
+    border: solid 1px #afafaf;
+    border-radius: 25px;
+    margin: 10px;
+    padding-left: 5px;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .search-container .search-field input {
+    border: none;
+    width: 540px;
+    border-radius: 25px;
+  }
+
+  .search-container .submit-field{
+    display: flex;
+    justify-content: center;
+  }
+
+  .advanced-search-container {
+    margin: 50px 40px;
+  }
+
+
+  .advanced-search-container .form-group {
+    display: flex;
+    margin-top: 10px;
+    padding: 10px 0;
+    align-items: center;
+  }
+
+  .advanced-search-container label {
+    display: inline-block;
+    font-size: 20px;
+    width: 16%;
+  }
+
+  .advanced-search-container .form-group label {
+    font-size: 14px;
+  }
+
+  .advanced-search-container .form-group input[type="text"] {
+    width: 49%;
+    padding: 2px 0;
+  }
+
+  .advanced-search-container .form-group .clarification {
+    font-size: 11px;
+    margin-left: 10px;
+  }
+
+
+  /* ########  image-search (위에 서치 클레스를 쓰면되지만 연습삼아 이미지꺼 따로 만듬)################# */
+  .image-search-container {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    height: 90%;
+  }
+
+  .image-search-container .image-search-field {
+    display: flex;
+    border: solid 1px #afafaf;
+    border-radius: 25px;
+    margin: 15px;
+  }
+
+
+  .image-search-container .image-search-field input {
+    padding-left: 15px;
+    border-radius: 25px;
+    border: none;
+  }
+
+  .image-search-container .image-search-submit {
+    display: flex;
+    justify-content: center;
+  }
+
+
+/* ########### 잡다한것 ############# */
+  .logo-subtext {
+    position: relative;
+    left: 110px;
+    top: -18px;
+    color: #4285f4;
+  }
+
+  .separator-line {
+    border-bottom: 1px solid #d6d6d6;
+  }
+
+  #whitespace {
+    display: inline-block;
+    width: 50%;
+  }
+
+  .appbar {
+    color: #d93025;
+    font-size: 20px;
+    margin: 30px;
+  }
+
+  .appbar label {
+    padding-left: 10px;
+  }
+
+  .advanced-search-container .form-group .clarification .monospace {
+    font-family: monospace;
+    /* 글자 형태 monospace로 바꿔줌 */
+  }
+
+  #position-right {
+    margin-top: 16px;
+    width: 66%;
+    margin-left: -13px;
+  }
+
+  input.blue-button {
+    background-color: dodgerblue;
+    color: white;
+    font-size: smaller;
+    max-width: 200px;
+    border-radius: 0px;
+    border: 1px solid #156bbd;
+    float: right;
+    padding: 10px 2px;
+    margin: 0;
+  }

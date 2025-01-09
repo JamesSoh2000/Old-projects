@@ -1,0 +1,26 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Create
+{% endblock %}
+
+{% block body %}
+
+    <h1>New Entry is Coming!</h1>
+
+    {%if message%}
+        <div class="alert alert-danger" style="text-align: center;" role="alert">
+            {{message}}
+        </div>
+    {%endif%}
+
+    <div class="form-group">
+        <form action="{% url 'create' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit">
+        </form>
+    </div>
+
+
+{% endblock %}

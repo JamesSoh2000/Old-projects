@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %} New Entry {% endblock %}
+
+{% block body %}
+<h1>New Entry is coming!</h1>
+<div class="form-group">
+    <form action="{% url 'create' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit">
+    </form>
+</div>
+{% endblock %}
+
+<!-- Here  form.as_p  will render them wrapped in <p> tags. -->

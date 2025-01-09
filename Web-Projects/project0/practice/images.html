@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+    <!-- 위에 두개 headers 링크. 'Google Search'와 'Google advanced Search' -->
+    <div class="header">
+        <div class="header-links">
+            <a href="index.html">Google Search</a>
+            <a href="advanced.html">Google Advanced Search</a>
+        </div>
+    </div>
+
+    <!-- SEARCH CONTAINER START -->
+    <div class="search-container">
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo" />
+        <!-- 로고 아래에 작게 images쓰여져있는 형태를 만들기 위해-->
+        <div class="logo-subtext">
+            <span>images</span>
+        </div>
+        <form action="https://www.google.com/search" method="get">
+            <div class="search-field">
+                <input type="text" name="q">
+            </div>
+            <!-- 여기서 왜 name과 value를 이렇게 해야 되는지 알아보기-->
+            <!-- submit이 눌리면 위에 action의 url에 https://www.google.com/search?q=sf&tbm=isch 이런식으로 name(key)과 value(value) data를 넣음 위 텍스트에는
+                 'sf'라고 검색해 value='sf', 아래 value='isch'라고 이미 설정해 이런 url이 나온것.-->
+            <!-- 그리고 type을 hidden으로 설정하면 Click the "Submit" button and the form-data will be sent to a page on the server called "https://www.google.com/search". -->
+            <input type="hidden" name="tbm" value="isch">
+            <div id="center">
+                <input type="submit" value="Search by Image">
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

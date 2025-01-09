@@ -1,0 +1,1 @@
+SELECT name FROM songs WHERE name LIKE "%feat.%"; /* sql에서 %는 0 or more characters가 들어갈수 있음 */

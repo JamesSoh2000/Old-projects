@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NewYear Alert</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'newyear/styles.css' %}" >
+</head>
+
+<body>
+    {% if newyears %}
+        <h1>Yes, it is newyears </h1>
+    {% else %}
+        <h1>No</h1>
+    {% endif %}
+</body>
+</html>

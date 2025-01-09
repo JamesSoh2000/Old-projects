@@ -1,0 +1,50 @@
+body {
+    background-image: url("image-files/final.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.login {
+    text-align: center;
+    margin-top: 50px;
+}
+
+img[src="image-files/logo.png"] {
+    display: block;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 20%;
+    width: 20%;
+
+
+}
+
+.h-300 {
+    height: 300px!important;
+}
+
+#login-page {
+    width: 500px;
+    padding: 2rem;
+
+}
+
+#login-page label {
+    display: block;
+}
+
+#login-page input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.text-white-mine {
+    text-align: left !important;
+}
+
+

@@ -1,0 +1,27 @@
+<!-- <!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>Hello</title>
+    </head>
+    <body>
+        내가정한 key이름인 name을 넣어줌
+        Hello, {{name}}
+
+        <form action="/greet" method="get">
+            <input type="text" autocomplete="off" autofocus placeholder="Name" name="name">
+            <input type="submit">
+        </form>
+
+    </body>
+</html> -->
+
+{% extends "layout.html" %}
+
+{% block body %}
+    <form action="/greet" method="post">
+        <input type="text" autocomplete="off" autofocus placeholder="Name" name="name">
+        <input type="submit">
+    </form>
+{% endblock %}

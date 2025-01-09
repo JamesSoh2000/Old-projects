@@ -1,0 +1,247 @@
+body {
+    margin: 0px;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+
+/* ############# INPUT ############# */
+  input {
+    font-size: 16px;
+    width: 300px;
+    padding: 13px 0;
+    /* Parent selector = & */
+  }
+
+  input:focus {
+    outline: none;
+    /* 1. input:focus는 모든 input에서 input키를 눌렀을때(예를 들어 검색창) https://www.w3schools.com/cssref/sel_focus.asp
+    Outline: none 이 없으면 input창을 눌렀을때 input의 주위 border가 진하게변함 https://www.w3schools.com/css/css_outline.asp */
+  }
+
+  input[type=text] {
+    /* Give input text a lighter color  별로 큰상관없음*/
+    color: #464646;
+    margin: 0 0 0 5px;
+  }
+
+
+  input[type=submit] {
+    font-size: 14px;
+    width: 185px;
+    /* Remove border with 'none' and make the border circular(끝에 둥글게) with 'radius'*/
+    border: none;
+    border-radius: 15px;
+    margin: 20px;
+
+  }
+
+  input[type=submit]:hover {
+    /* Add box-shadow when hovering button (border adds space) */
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);
+  }
+
+
+
+/* ############# Header ############# */
+  .header, .header-links, .header-advanced-logo, .header-advanced {
+    display: flex;
+    align-items: center;
+  }
+
+  /* 이거는 <div class="header header-links">를 해주면 이 안에 전부적용
+  .header.header-links{
+    background-color: red;
+  }
+  이거는 <div class="header">      이렇게 해주면 header-links아래 있는 것들에 전부 적용
+            <div class="header-links">
+
+  .header .header-links{
+    background-color: red;
+  } */
+
+  .header a, .header-links a, .header-advanced-logo a, .header-advanced a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+  }
+
+  .header-links {
+    margin-left: auto;
+  }
+
+  .header-advanced {
+    background-color: #f1f1f1;
+    height: 50px;
+  }
+
+  .header-advanced-logo {
+    padding: 10px;
+  }
+
+  .header-advanced-logo img {
+    height: 40%;
+    width: 40%;
+    /* Modify the size of img */
+  }
+
+
+/* ############# Search ############# */
+  .search-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    /* Align the search container in the center of the viewport
+    1. flex-direction은 안에 있는 elements들을 한 column으로 정렬 + 이뜻은 The flexbox items are ordered the same way as the text direction, along the cross axis(세로축).
+    그리고 안에 있는 아이템들은 전부 공간의 최대 가로길이를 얻게됨.
+    2. justify-content: https://www.w3schools.com/cssref/css3_pr_justify-content.asp
+    3. align-items: https://www.w3schools.com/cssref/css3_pr_align-items.asp
+    4. height: https://developer.mozilla.org/en-US/docs/Web/CSS/height
+    여기서 이 클래스를 가지고있는 div의 height를 전체화면의 90%로 늘려 위치를 더 아래로 땡겨옴*/
+  }
+
+  /* 이건 .search-container 안에 있는 .search-field 안에 있는것만 적용하는것임.  border-radius로 곡선으로 바꿔줌*/
+  .search-container .search-field {
+    display: flex;
+    flex-direction: row;
+    border-radius: 25px;
+    border: 1px solid #afafaf;
+    align-items: center;
+    margin: 10px;
+    padding-left: 15px;
+  }
+
+  /* 위에 있는 .search-field가 있는 div의 border와 input의 border는 서로 따로 있기 때문에 둘이 겹쳐보이기때문에
+  input의 border를 안보이게 none으로 바꿈. 추가로 border-radius로 곡선으로 바꿔줌(근데 이걸 하는이유가 border는 안보이지만 서치필드와의 볼더와 겹쳐 볼더가 지워지기때문임)*/
+  .search-container .search-field input {
+    border: none;
+    border-radius: 25px;
+  }
+
+  .search-container .logo-subtext {
+    /* 포지션에 대한 설명 https://www.w3schools.com/css/css_positioning.asp
+    여기서 position: relative를 하면 원래 위<div>에서 영향을 받았던 포지션이(이상황에선 센터에 고정되는현상)을 깨고 따로 움직일수있음.*/
+    color: #4285f4;
+    position: relative;
+    left: 110px;
+    top: -18px;
+  }
+
+  .advanced-search-container {
+    margin: 50px 40px;
+  }
+
+  .advanced-search-container label {
+    display: inline-block;
+    width: 16%;
+    font-size: 20px;
+    /* width나 height를 정할때 퍼센트는 전체 길이의 퍼센트다. */
+  }
+
+  .advanced-search-container .whitespace {
+    /* 인라인과 블록 그리고 인라인블록에 대해 https://seungwoohong.tistory.com/23 */
+    display: inline-block;
+    width: 50%;
+  }
+
+  .advanced-search-container .form-group {
+    display: flex;
+    align-items: center;
+    /* flex에 관한 설명 https://studiomeal.com/archives/197 */
+    margin-top: 10px;
+    padding: 10px 0;
+  }
+
+  .advanced-search-container .form-group label {
+    /* 위에 Find Pages with...의 width와 똑같이 맞춰준다  */
+    width: 16%;
+    font-size: 14px;
+  }
+
+  .advanced-search-container .form-group input[type=text] {
+    width: 49%;
+    padding: 2px 0;
+    /* 이 2px패딩을 적용하기 전 input창은 48px은 padding하고 있기때문에 2px을 적용해서 원래 높이의 +2px한 padding의 형태로 만들어준다. */
+  }
+
+  .advanced-search-container .form-group .clarification {
+    font-size: 11px;
+    width: 30%;
+    margin-left: 1%;
+    /* 옆에 input창과 너무 붙어있으므로 margin을 이용해 전체 창의 1%길이를 이동함.
+    그리고 clarification 블럭은 현재 왼쪽이 차지하는 화면양이 16% + 50% = 66% 정도이므로 30퍼정도공간을 써줌. TMI 그에반해 위에 label 'To do this in the search box.'는 16%임. */
+  }
+
+  .advanced-search-container .form-group .clarification .monospace {
+    font-family: monospace;
+    /* 글자 형태 monospace로 바꿔줌 */
+  }
+
+  .advanced-search-container .form-group .right-align {
+    width: 50%;
+    /* Advanced Search 버튼을 누르기위한 <div> 블럭의 길이를 50퍼로 */
+  }
+
+
+
+
+
+/* ########### 잡다한 classes ############### */
+  .separator-line {
+    border-bottom: solid 1px #d6d6d6;
+  }
+
+  .appbar {
+    margin: 30px 10px;
+  }
+
+  .appbar label {
+    color: #d93025;
+    font-size: 20px;
+    margin: 50px 30px;
+  }
+
+  #center {
+    display: flex;
+    justify-content: center;
+  }
+
+  input.blue-button {
+    background-color: dodgerblue;
+    color: white;
+    font-size: smaller;
+    max-width: 200px;
+    border-radius: 0px;
+    border: 1px solid #156bbd;
+    float: right;
+    padding: 10px 2px;
+    margin: 0;
+
+  }
+
+  .right-align {
+    margin-top: 16px;
+    width: 66%;
+    margin-left: -10px;
+  }
+
+
+/* https://studiomeal.com/archives/197 */
+/* 1. flex-direction은 안에 있는 elements들을 한 column으로 정렬
+2. justify-content: https://www.w3schools.com/cssref/css3_pr_justify-content.asp
+3. align-items: https://www.w3schools.com/cssref/css3_pr_align-items.asp 쉽게설명하면 align-items는 자기가 들어있는 블록안에 있는 '내용'들이 height의 중간선에 딱 위치되는것.
+4. height: https://developer.mozilla.org/en-US/docs/Web/CSS/height
+5. Padding과 Margin에 대하여 https://coding-factory.tistory.com/187
+6. input:focus는 모든 input에서 input키를 눌렀을때(예를 들어 검색창) https://www.w3schools.com/cssref/sel_focus.asp
+    Outline: none 이 없으면 input창을 눌렀을때 input의 주위 border가 진하게변함  https://www.w3schools.com/css/css_outline.asp
+7. 포지션에 대한 설명 https://www.w3schools.com/css/css_positioning.asp
+8. !!!!! 매우 중요 !!!!!! 인라인과 블록 그리고 인라인블록에 대해 https://seungwoohong.tistory.com/23
+9. flex에 관한 설명 https://studiomeal.com/archives/197
+
+
+
+
+
+
+*/

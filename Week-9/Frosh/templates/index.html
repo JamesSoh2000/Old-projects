@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1>Register</h1>
+    <form action="/register" method="post">
+        <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
+
+        <!-- 1. 아래와 똑같은 방법임
+        <select name="sport">
+            <option disable selected>Sports</option>
+            <option>Soccer</option>
+            <option>Basketball</option>
+            <option>Baseball</option>
+        </select>
+        2. 위와 똑같은 방법
+        <select>
+            <option disable selected>Sports</option>
+            {% for sport in sports %}
+                <option>{{sport}}</option>
+            {% endfor %}
+        </select>
+
+        3. 여러가지 체크박스 방식(type="radio") 하나만 체크하는타입="radio" -->
+        {% for sport in sports %}
+            <input type="radio" name="sport" value="{{sport}}">{{sport}}
+        {% endfor %}
+        <input type="submit" value="Register">
+    </form>
+{% endblock %}
